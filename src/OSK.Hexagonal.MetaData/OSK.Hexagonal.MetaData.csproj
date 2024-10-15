@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<RepositoryUrl>https://github.com/OpenSourceKingdom/OSK.Hexagonal.MetaData</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Description>A metadata library that can be used in conjunction with a hexagonally developed library to better designate the interfaces that are implemented by the library vs. the consumer.</Description>
+		<PackageTags>OpenSourceKingdom, OpenSource, MetaData, Meta, Data, Hexagonal, Architecture, Marker, Interface, Implementation, Port, Adapter</PackageTags>
+		<Authors>BlankDev117</Authors>
+		<Title>OSK.Hexagonal.MetaData</Title>
+	</PropertyGroup>
+
+</Project>
