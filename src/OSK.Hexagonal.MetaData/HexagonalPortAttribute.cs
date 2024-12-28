@@ -2,25 +2,14 @@
 
 namespace OSK.Hexagonal.MetaData
 {
-    /// <summary>
-    /// An attribute that can be used to desginate an interface as a type of hexagonal port
-    /// </summary>
+    [Obsolete("Use HexagonalIntegrationType and associated attribute instead. Will be removed in future update")]
     [AttributeUsage(validOn: AttributeTargets.Interface, AllowMultiple = false)]
-    public class HexagonalPortAttribute: Attribute
+    public class HexagonalPortAttribute: HexagonalIntegrationAttribute
     {
-        #region Variables
-
-        public HexagonalPort HexagonalPort { get; }
-
-        #endregion
-
-        #region Constructors
-
-        public HexagonalPortAttribute(HexagonalPort hexagonalPort)
+        public HexagonalPortAttribute(HexagonalPortType portType)
+            : base(portType == HexagonalPortType.Primary 
+                  ? HexagonalIntegrationType.LibraryProvided : HexagonalIntegrationType.ConsumerRequired)
         {
-            HexagonalPort = hexagonalPort;
         }
-
-        #endregion
     }
 }
