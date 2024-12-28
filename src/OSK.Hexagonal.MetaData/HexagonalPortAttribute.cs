@@ -6,8 +6,8 @@ namespace OSK.Hexagonal.MetaData
     [AttributeUsage(validOn: AttributeTargets.Interface, AllowMultiple = false)]
     public class HexagonalPortAttribute: HexagonalIntegrationAttribute
     {
-        public HexagonalPortAttribute(HexagonalPortType portType)
-            : base(portType == HexagonalPortType.Primary 
+        public HexagonalPortAttribute(HexagonalPort portType)
+            : base(portType == HexagonalPort.Primary 
                   ? HexagonalIntegrationType.LibraryProvided : HexagonalIntegrationType.ConsumerRequired)
         {
         }
