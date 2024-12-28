@@ -1,4 +1,5 @@
-﻿using OSK.Hexagonal.MetaData.Internal.Helpers;
+﻿using OSK.Hexagonal.MetaData.Exceptions;
+using OSK.Hexagonal.MetaData.Internal.Helpers;
 using Xunit;
 
 namespace OSK.Hexagonal.MetaData.UnitTests.Internal.Helpers
@@ -20,7 +21,7 @@ namespace OSK.Hexagonal.MetaData.UnitTests.Internal.Helpers
             params HexagonalIntegrationType[] mismatchedTypes)
         {
             // Arrange/Act/Assert
-            Assert.Throws<InvalidOperationException>(() => HexagonalHelper.ValidateHexagonalIntegration(mismatchedTypes.ToHashSet()));
+            Assert.Throws<HexagonalMetaDataException>(() => HexagonalHelper.ValidateHexagonalIntegration(mismatchedTypes.ToHashSet()));
         }
 
 
